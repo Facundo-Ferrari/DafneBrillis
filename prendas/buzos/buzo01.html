@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dafne Brillis</title>
+    <meta charset='utf-8'>
+    <meta name='keywords' content=''>
+    <meta name='Description' content=''>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="../../img/corazon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='../../prendas.css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="grid-container">
+    <header class="grid-header">
+        <div class="up-text">
+            <div class="left-text">atclientes@brillis.com.ar</div>
+            <div class="center-text">ENVIOS GRATIS A PARTIR DE $8999</div>
+            <div class="right-text">3 y 6 CUOTAS SIN INTERES</div>
+        </div>
+        <div class="logo">
+            <a href="../../index.html" class="bz1"><img src='../../img/logo.png' alt='logo' class="img-logo"></a>
+        </div>
+    </header>
+    <div class="grid-line">
+        <h2>Naive virtue / buzos</h2>
+    </div>
+    <main class="grid-main">
+        <div class="product-card">
+            <div class="main-images w3-content w3-display-container">
+                <img class="mySlides" src="../../img/prendas/doble/015a.png" style="width:100%">
+                <img class="mySlides" src="../../img/prendas/doble/015b.png" style="width:100%">
+                <img class="mySlides" src="../../img/prendas/doble/015c.png" style="width:100%">
+                <img class="mySlides" src="../../img/prendas/doble/015d.png" style="width:100%">
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="btn-area">
+            <button class="button is-outlined" id="btn1">- 1 +</button>
+            <button class="button is-outlined" id="btn2">AGREGAR AL CARRITO</button>
+        </div>
+    </main>
+    <aside class="grid-aside">
+        <div class="product">
+            <h2 class="title">Buzo 015</h2>
+            <h3 class="price">$18800</h2>
+            <p class="description">Tu nuevo básico para usar con absolutamente todo. Éste buzo está hecho de algodón rústico y estampado con vinilo en la espalda, tiene un elástico regulable para más comodidad al cuerpo y cintas a los costados de las mangas con la marca sublimada, para ser una súper brillita. El cuello le da un toque especial.</p>
+            <h3 class="color">Color:</h3>
+            <div class="colores">
+                <img src="../../img/colores/rosa.png">
+                <img src="../../img/colores/rosa.png">
+            </div>
+            <h3 class="waist">Talle:</h3>
+            <div class="btn-waist">
+                <div class="btn-up">
+                    <button class="button is-outlined" id="btnXS">XSMALL</button>
+                    <button class="button is-outlined" id="btnS">SMALL</button>
+                    <button class="button is-outlined" id="btnM">MEDIUM</button>
+                    <button class="button is-outlined" id="btnL">LARGE</button>
+                </div>
+                <div class="btn-down">
+                    <button class="button is-outlined" id="btnXL">XLARGE</button>
+                    <button class="button is-outlined" id="btn2XL">2XLARGE</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+</body>
+</html>

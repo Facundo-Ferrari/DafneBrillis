@@ -1,0 +1,155 @@
+:root {
+    --primario: #f2a6c3;
+    --secundario: #ff80a8;
+    --border: #ffb2d9;
+    --purple: #ffb3ff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Shrikhand', cursive;
+    line-height: 1.9;
+    font-weight: 200;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-areas: "header" "main";
+    grid-template-rows: 120px 1fr;
+    grid-template-columns: 1fr;
+}
+
+.grid-header{
+    grid-area: header;
+}
+
+.grid-main{
+    grid-area: main;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(231,145,218,1) 100%);
+}
+
+/* ========================   HEADER     ======================== */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.left-text, .center-text, .right-text {
+    font-family: 'DotGothic16', sans-serif;
+    display: inline-flex;
+    color: var(--primario);
+    letter-spacing: 1px;
+    font-size: .8em;
+    font-weight: 800;
+    padding-left: .5%;
+}
+
+.center-text, .right-text {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-left: 31%;
+    cursor: default;
+}
+
+/* IMG */
+.logo {
+    display: flex;
+    justify-content:center;
+}
+
+.img-logo {
+    padding-top: 5%;
+}
+
+/* CRS */
+.slideshow-container {
+  max-width: 24%;
+  padding-top: 5px;
+  position: relative;
+  margin: auto;
+}
+
+.Containers {
+  display: none;
+}
+
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .4s;
+  animation-name: fade;
+  animation-duration: .4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@media (max-width: 1490px) {
+  .grid-container {
+      width: 100%;
+  }
+  .grid-header {
+      align-self: center;
+  }
+  .left-text, .center-text, .right-text {
+      display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .slideshow-container {
+    max-width: max-content;
+  }
+}
